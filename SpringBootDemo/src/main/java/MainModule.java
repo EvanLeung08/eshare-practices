@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @EnableAutoConfiguration
 public class MainModule {
-    @RequestMapping("/")
+    @RequestMapping("/sayHello")
     String sayHello() {
         return "Hello World!";
     }
