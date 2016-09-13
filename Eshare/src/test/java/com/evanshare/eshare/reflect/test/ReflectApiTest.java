@@ -1,6 +1,6 @@
 package com.evanshare.eshare.reflect.test;
 
-import com.evanshare.eshare.entity.Person;
+import com.evanshare.eshare.entity.User;
 import org.junit.Test;
 
 import java.lang.reflect.Constructor;
@@ -20,9 +20,9 @@ public class ReflectApiTest {
     @Test
     public void testGetClassObj() throws ClassNotFoundException {
         // Class clazz = Boolean.TYPE;
-        Class clazz1 = Person.class;
-        Class clazz2 = Class.forName("com.evanshare.eshare.entity.Person");
-        Class clazz3 = new Person().getClass();
+        Class clazz1 = User.class;
+        Class clazz2 = Class.forName("com.evanshare.eshare.entity.User");
+        Class clazz3 = new User().getClass();
         // System.out.println(clazz);
         System.out.println(clazz1);
         System.out.println(clazz2);
@@ -34,7 +34,7 @@ public class ReflectApiTest {
      */
     @Test
     public void testGetClassFields() {
-        Class clazz = Person.class;
+        Class clazz = User.class;
         Field[] fields = clazz.getDeclaredFields();
         for (Field f : fields) {
             System.out.println(f.getName());
@@ -46,7 +46,7 @@ public class ReflectApiTest {
      */
     @Test
     public void testGetClassConstructor() {
-        Class clazz = Person.class;
+        Class clazz = User.class;
         Constructor[] constructors = clazz.getDeclaredConstructors();
         for (Constructor c : constructors) {
             System.out.println(c.getName());
@@ -58,7 +58,7 @@ public class ReflectApiTest {
      */
     @Test
     public void testGetMethods() {
-        Class clazz = Person.class;
+        Class clazz = User.class;
         Method[] methods = clazz.getDeclaredMethods();
         for (Method m : methods) {
             System.out.println(m.getName());
@@ -70,7 +70,7 @@ public class ReflectApiTest {
      */
     @Test
     public void testFieldSetterAndGetter() throws Exception {
-        Class clazz = Person.class;
+        Class clazz = User.class;
         Object obj = clazz.newInstance();
         Field ageField = clazz.getDeclaredField("age");
         Field nameField = clazz.getDeclaredField("name");
@@ -89,7 +89,7 @@ public class ReflectApiTest {
      */
     @Test
     public void testInvokeMethod() throws Exception {
-        Class clazz = Person.class;
+        Class clazz = User.class;
         Object obj = clazz.newInstance();
         //获取set Method对象
         Method setMethod = clazz.getDeclaredMethod("setName",String.class);

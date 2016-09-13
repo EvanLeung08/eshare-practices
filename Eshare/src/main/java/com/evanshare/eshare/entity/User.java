@@ -4,11 +4,11 @@ package com.evanshare.eshare.entity;
  * Created by liangyh on 2016/9/11.
  * Email:10856214@163.com
  */
-public class Person {
+public class User {
     private String name;
     private int age;
 
-    public Person(){
+    public User(){
 
     }
 
