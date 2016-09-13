@@ -1,4 +1,4 @@
-package com.evanshare.eshare.entity.reflect;
+package com.evanshare.eshare.reflect.test;
 
 import com.evanshare.eshare.entity.Person;
 import org.junit.Test;
