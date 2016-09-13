@@ -6,6 +6,7 @@ import java.lang.reflect.Field;
 import java.util.Properties;
 
 /**
+ * IOC容器，负责管理对象的管理
  * Created by liangyh on 2016/9/13.
  * Email:10856214@163.com
  */
@@ -17,6 +18,9 @@ public class Ioc {
         loadConfig();
     }
 
+    /**
+     * 加载配置文件
+     */
     private void loadConfig() {
         InputStream in = Ioc.class.getResourceAsStream("/ioc.properties");
         properties = new Properties();
@@ -35,9 +39,9 @@ public class Ioc {
     }
 
     /**
-     * 根据类获取对象
+     * 根据类名获取对象
      *
-     * @param name
+     * @param name 类的名称
      * @return
      */
     public Object get(String name) {
