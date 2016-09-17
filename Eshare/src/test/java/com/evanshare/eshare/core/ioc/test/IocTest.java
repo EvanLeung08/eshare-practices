@@ -1,7 +1,7 @@
-package com.evanshare.eshare.ioc.test;
+package com.evanshare.eshare.core.ioc.test;
 
-import com.evanshare.eshare.ioc.Ioc;
-import com.evanshare.eshare.service.UserService;
+import com.evanshare.eshare.core.ioc.Ioc;
+import com.evanshare.eshare.core.service.UserService;
 import org.junit.Test;
 
 /**

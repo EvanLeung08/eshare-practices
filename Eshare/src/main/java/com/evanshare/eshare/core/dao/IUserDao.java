@@ -1,4 +1,4 @@
-package com.evanshare.eshare.dao;
+package com.evanshare.eshare.core.dao;
 
 /**
  * Created by liangyh on 2016/9/13.

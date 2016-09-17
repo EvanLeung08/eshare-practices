@@ -1,4 +1,4 @@
-package com.evanshare.eshare.entity;
+package com.evanshare.eshare.core.entity;
 
 /**
  * Created by liangyh on 2016/9/11.

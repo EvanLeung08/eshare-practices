@@ -1,4 +1,4 @@
-package com.evanshare.eshare.dao;
+package com.evanshare.eshare.core.dao;
 
 /**
  * 用户数据库访问类

@@ -1,6 +1,6 @@
-package com.evanshare.eshare.reflect.test;
+package com.evanshare.eshare.core.reflect.test;
 
-import com.evanshare.eshare.entity.User;
+import com.evanshare.eshare.core.entity.User;
 import org.junit.Test;
 
 import java.lang.reflect.Constructor;
@@ -21,7 +21,7 @@ public class ReflectApiTest {
     public void testGetClassObj() throws ClassNotFoundException {
         // Class clazz = Boolean.TYPE;
         Class clazz1 = User.class;
-        Class clazz2 = Class.forName("com.evanshare.eshare.entity.User");
+        Class clazz2 = Class.forName("User");
         Class clazz3 = new User().getClass();
         // System.out.println(clazz);
         System.out.println(clazz1);

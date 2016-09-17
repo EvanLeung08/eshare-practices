@@ -1,4 +1,4 @@
-package com.evanshare.eshare.ioc;
+package com.evanshare.eshare.core.ioc;
 
 import java.io.IOException;
 import java.io.InputStream;

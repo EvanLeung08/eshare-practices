@@ -1,6 +1,6 @@
-package com.evanshare.eshare.service;
+package com.evanshare.eshare.core.service;
 
-import com.evanshare.eshare.dao.IUserDao;
+import com.evanshare.eshare.core.dao.IUserDao;
 
 /**
  * Created by liangyh on 2016/9/13.
