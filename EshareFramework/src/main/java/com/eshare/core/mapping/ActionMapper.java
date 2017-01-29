@@ -1,6 +1,7 @@
 package com.eshare.core.mapping;
 
 import com.eshare.core.config.WebConfig;
+import com.eshare.core.ioc.Inject;
 
 import javax.servlet.ServletRequest;
 import javax.servlet.http.HttpServletRequest;
@@ -14,6 +15,8 @@ import java.util.regex.Pattern;
  * Email:10856214@163.com
  */
 public class ActionMapper {
+    @Inject
+    private WebConfig webConfig;
 
     public ActionMapping findMapping(ServletRequest request) {
         ActionMapping actionMapping = new ActionMapping();
@@ -24,7 +27,7 @@ public class ActionMapper {
         //根据Uri地址截取用户请求的方法名
         String methodName = uri.substring(req.getContextPath().length() + 1);
         //从配置文件获取所有规则匹配映射
-        WebConfig webConfig = new WebConfig();
+       // WebConfig webConfig = new WebConfig();
         Map<String, Mapping> mappings = webConfig.getMappings();
         //根据请求方法名找到匹配的映射类
         Mapping mapping = mappings.get(methodName);
