@@ -17,7 +17,7 @@ public class PersonAction {
     }
 
     public String sayHello(){
-        System.out.println("sayHello ch3");
+        System.out.println("sayHello ch4");
         boolean flag = false;
         if(flag){
             return "SUCCESS";

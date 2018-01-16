@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!-- resource：引用properties属性文件
+    属性文件中的key在sqlMapconfig引用，也可以在mapper.xml中引用
+
+     -->
+    <properties resource="db.properties">
+        <!-- <property name="" value=""/> -->
+    </properties>
+
+    <!-- mybatis的运行参数 -->
+    <!-- <settings>
+        <setting name="" value=""/>
+    </settings> -->
+
+    <!-- 定义别名 -->
+    <typeAliases>
+        <!-- 单个 别名定义
+        type：pojo类型
+        alias：别名
+         -->
+        <!-- <typeAlias type="cn.itcast.mybatis.po.User" alias="user"/> -->
+
+        <!-- 批量定义别名，通过package设置pojo所在包
+        如果需要让mybatis扫描多个包，定义多个package
+        mybatis扫描包下边的pojo自动将包下所有pojo定义别名，别名名称是类名（首字母小写或大写都可以）
+         -->
+        <package name="com.eshare.model" />
+
+    </typeAliases>
+
+    <!-- 和spring整合后 environments配置将废除，要用到第三方的数据源配置-->
+    <!-- mybatis运行环境配置 -->
+    <environments default="development">
+        <environment id="development">
+            <!-- 使用jdbc事务管理-->
+            <transactionManager type="JDBC" />
+            <!-- mybatis自身的数据库连接池-->
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}" />
+                <property name="url" value="${jdbc.url}" />
+                <property name="username" value="${jdbc.username}" />
+                <property name="password" value="${jdbc.password}" />
+            </dataSource>
+        </environment>
+    </environments>
+
+    <!-- mapper映射配置 -->
+    <mappers>
+        <mapper resource="UserMapper.xml"/>
+        <!-- <mapper resource="mapper/UserMapper.xml"/> -->
+
+        <!-- 加载mapper接口
+            要求：
+            mapper.xml和mapper.java同名且在一个目录
+         -->
+        <!-- <mapper class="cn.itcast.mybatis.mapper.UserMapper"/> -->
+
+        <!-- 批量加载 mapper接口
+        指定mapper所在包名
+        如果加载多个包下的mapper，定义多个package
+        要求：
+        mapper.xml和mapper.java同名且在一个目录
+         -->
+        <package name="com.eshare.mapper"/>
+
+    </mappers>
+</configuration>

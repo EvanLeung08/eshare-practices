@@ -17,6 +17,8 @@ import java.io.IOException;
 public class DispatchFilter implements Filter {
     @Inject
     private ActionMapper actionMapper;
+    @Inject
+    private WebExecutor webExecutor;
 
     public void init(FilterConfig filterConfig) throws ServletException {
         //创建IOC容器
@@ -33,9 +35,9 @@ public class DispatchFilter implements Filter {
         //ActionMapper actionMapper = new ActionMapper();
         ActionMapping mapping =actionMapper.findMapping(request);
         if(mapping!=null){
-            WebExecutor executor = new WebExecutor();
+          //WebExecutor executor = new WebExecutor();
             //执行用户请求
-            executor.execute(request,response,mapping);
+            webExecutor.execute(request,response,mapping);
         }else {
             //非框架处理部分,继续执行其他环节
             chain.doFilter(request, response);
