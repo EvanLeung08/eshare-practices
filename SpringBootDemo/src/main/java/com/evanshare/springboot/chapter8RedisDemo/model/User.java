@@ -1,4 +1,4 @@
-package com.evanshare.springboot.chapter8.model;
+package com.evanshare.springboot.chapter8RedisDemo.model;
 
 import java.io.Serializable;
 

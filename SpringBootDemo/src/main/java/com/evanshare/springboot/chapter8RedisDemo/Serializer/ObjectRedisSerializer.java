@@ -1,4 +1,4 @@
-package com.evanshare.springboot.chapter8.Serializer;
+package com.evanshare.springboot.chapter8RedisDemo.Serializer;
 
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.serializer.support.DeserializingConverter;

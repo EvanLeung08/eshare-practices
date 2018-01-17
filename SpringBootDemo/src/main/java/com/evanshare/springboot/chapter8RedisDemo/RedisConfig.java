@@ -1,7 +1,7 @@
-package com.evanshare.springboot.chapter8;
+package com.evanshare.springboot.chapter8RedisDemo;
 
-import com.evanshare.springboot.chapter8.Serializer.ObjectRedisSerializer;
-import com.evanshare.springboot.chapter8.model.User;
+import com.evanshare.springboot.chapter8RedisDemo.Serializer.ObjectRedisSerializer;
+import com.evanshare.springboot.chapter8RedisDemo.model.User;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
